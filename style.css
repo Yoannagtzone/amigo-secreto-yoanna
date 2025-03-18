@@ -1,0 +1,184 @@
+:root {
+    --color-primary: #6d93f4;
+    --color-secondary: #b10ad6;
+    --color-tertiary: #0f76f4;
+    --color-button: #5026d8;
+    --color-button-hover: #2926dc;
+    --color-text: #2f0475;
+    --color-white: #0fdde4;
+}
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    height: 100vh;
+    background-color: var(--color-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+    color: var(--color-text);
+}
+
+/* Contenedor principal */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    max-width: 1000px;
+    background-color: var(--color-secondary);
+    padding: 8px;
+    border-radius: 10% 40%;
+    border: 2mm ridge rgba(37, 215, 255, 0.6);
+    box-shadow: 10px 5px 5px rgb(49, 10, 243);
+    text-align: center;
+}
+
+/* Banner */
+.header-banner img {
+    width: 100%;
+    max-width: 300px;
+    margin: 30px 0;
+    border-radius: 20px;
+    border: dashed rgb(49, 37, 225);
+    box-shadow: 10px 5px 5px rgb(87, 206, 242);
+}
+
+/* Títulos */
+.main-title {
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--color-white);
+}
+
+.section-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 3px 0;
+    color: var(--color-white);
+}
+
+/* Contenedor de entrada */
+.input-wrapper {
+    display: flex;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 30px;
+}
+
+.input-name {
+    flex: 100;
+    padding: 12px;
+    border: 2px solid var(--color-white);
+    border-right: solid;
+    border-radius: 40px 0 0 1px;
+    font-size: 12px;
+}
+
+.button-add {
+    padding: 12px;
+    background-color: var(--color-tertiary);
+    color: var(--color-white);
+    border: 2px solid var(--color-white);
+    border-radius: 0 16px 3px 0;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.button-add:hover {
+    background-color: #fa11eb;
+}
+
+/* Lista de amigos */
+ul {
+    list-style-type: space-counter;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.name-list {
+    padding: 10px;
+}
+
+.result-list {
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Botón de sorteo */
+.button-draw {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200%;
+    max-width: 300px;
+    padding: 12px;
+    background-color: var(--color-button);
+    color: var(--color-white);
+    font-size: 18px;
+    font-weight: bold;
+    border: 1mm ridge rgba(60, 147, 223, 0.6);
+    border-radius: 10px 100px / 120px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.button-draw img {
+    margin-right: 10px;
+    width: 10px;
+}
+
+.button-draw:hover {
+    background-color: var(--color-button-hover);
+}
+
+/* Animaciones */
+@keyframes parpadeo {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.3;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+    .main-content {
+        width: 95%;
+    }
+
+    .input-wrapper {
+        flex-direction: column;
+    }
+
+    .input-name {
+        border-radius: 8px;
+        border-right: 2px solid var(--color-white);
+        margin-bottom: 10px;
+    }
+
+    .button-add {
+        border-radius: 10px;
+    }
+}
